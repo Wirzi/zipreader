@@ -8,7 +8,7 @@ def fileiterator(zipf):
 
 def process(zipf, callback):
 	with zipfile.ZipFile(zipf, "r", zipfile.ZIP_STORED) as openzip:
-		filelist = openZip.infolist()
+		filelist = openzip.infolist()
 		for f in filelist:
 			callback(f.filename, openzip.read(f))
 
